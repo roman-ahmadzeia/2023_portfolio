@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href ="style.css" rel = "stylesheet" type = "text/css">
+    <title>Roman Ahmad Zeia</title>
+</head>
+
+<body>
+    <nav class = "nav_bar">
+        <ul>
+            <li><a href ="#intro">intro</a></li>
+            <li><a href ="#about">about</a></li>
+            <li><a href ="#experience">experience</a></li>
+            <li><a href ="#projects">projects</a></li>
+            <li><a href ="/Romans 2023 Resume.pdf" download = "Roman Ahmad Zeia's Resume">resume</a></li>
+        </ul>
+    </nav>
+
+    <div class = "intro" id ="intro">
+        <h1 class = "introduction"> Hey there, im <span>Roman</span></h1>
+        <p class = "headline">I like to code and make things</p>
+        <p class = "under_headline"> I am a computer science student based in <span>Toronto</span> and have a great passion<br>for software development and always looking to learn something new.</p>
+        <img src = '/images/headshot.png' class ="headshot">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <div class = quicklinks>
+            <ul>
+                <li>
+                    <a href="https://github.com/roman-ahmadzeia" target=”_blank">  <ion-icon name="logo-github"></ion-icon></a>
+                  
+                </li>
+                <li>
+                    <a href="mailto:romanahmadzeia2@gmail.com" target=”_blank">  <ion-icon name="mail-outline"></ion-icon></a>
+                  
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/roman-ahmad-zeia-0b4902185" target=”_blank">  <ion-icon name="logo-linkedin"></ion-icon></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class = "about" id =about>
+        <h1 class = "about-title">About.</h1>
+        <div class = "something-div">
+            <div class = "about-section">
+                <h1>I currently attend <span>University Of Ontario Institute Of Technology</span> working towards my BsC in Computer Science, outside of school I have experience in the data field and im looking to explore new horizons as I aspire to become a full stack developer.</h1>
+            </div>
+            <div class = "image-in-class-div">
+                <img src = '/images/in_school.png'>
+            </div>
+        </div>
+
+        <h1 class ="skills-title">Some Of My Skills.</h1>
+        <div class = "programs">
+            <img src = "images/python.png" id = "python_logo">
+            <img src = "images/cpp.png" id = "cpp_logo">
+            <img src = "images/react.png" id = "react_logo">
+            <img src = "images/java.png" id = "java_logo">
+            <img src = "images/js.png" id = "javascript_logo">
+            <img src = "images/htmlcss.png" id = "html5css_logo">
+            <img src = "images/flutter.png" id = flutter_logo>
+            <img src = "images/sql.png" id = "sql_logo">
+        </div>
+    </div>
+
+    <div class = "experience" id =experience>
+        <h1 class ="experience-title">My Experiences.</h1>
+       <a href = "https://www.canadianmusicians.coop/"> <h2 class ="cmc-title">Canadian Musicians Cooperative</h2> </a>
+
+        <div class = "experience-1">
+            <h2 class = "job-desc"> Data Specialist Intern  (July 2023 - October 2023)</h2>
+            <ul class = "work-desc">
+                <li>
+                    Using my analytical skills, I processed and cleaned datasets and extracted valuable information and patterns
+                </li>
+                <li>
+                    Used tools such as Python, Data visualisation Tools, App Scripts and Javascript to automate data extraction
+                </li>
+                <li>
+                    As part of a team, I collaborated closely with other departments and team members to gather project requirements, define objectives, and deliver solutions within set timelines.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class = "projects" id="projects">
+        <h1 class = "projects-title">Projects.</h1>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="images/auto-plus-slide.png" style="width:100%">
+              <div class="title"><a href="https://github.com/roman-ahmadzeia" target=”_blank">  <ion-icon name="logo-github"></ion-icon></a></div>
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="/images/spam-detector.png" style="width:100%">
+              <div class="title"><a href="https://github.com/roman-ahmadzeia" target=”_blank">  <ion-icon name="logo-github"></ion-icon></a></div>
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="/images/fitness-app-slide.png" style="width:100%">
+              <div class="title"><a href="https://github.com/roman-ahmadzeia" target=”_blank">  <ion-icon name="logo-github"></ion-icon></a></div>
+            </div>
+          
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+
+          <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                 showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+          </script>
+    
+        </div>
+    </div>
+
+    <div class = "copyright-info-bottom">
+        <h3 class = "copyright"> Powered by HTML5, CSS And Javascript </h3>
+        <h3 class ="copyright"> Built and designed by Roman Ahmad Zeia</h3>
+        <h3 class = "copyright"> All rights reserved.</h3>
+    </div>
+
+  
+
+</body>
+
+</html>
