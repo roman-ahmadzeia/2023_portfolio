@@ -5,7 +5,7 @@
     overflow:scroll;
 }
   ::-webkit-scrollbar {
-      width: 0px;
+      width: 100%;
       background: transparent;
   }
   
@@ -21,33 +21,63 @@
     padding:1%;
     border-radius: 5%;
     background-color: rgba(249, 249, 255, 0.471);
+    width: 100%;
 }
 .nav_bar
 {
+    width: 100%;
     justify-content: center;
     display:flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.nav_bar ul li
+.nav_bar a
 {
     display:inline-block;
     list-style: none;
     margin: 1rem 3rem;
 }
 
-.nav_bar ul li a
+.nav_bar a
 {
     font-size: 1.5rem;
     font-family: 'Roboto';
     text-decoration: none;
     color: black;
 }
-.nav_bar ul li a:hover
+.nav_bar a:hover
 {
     color: rgb(255, 0, 89);
 }
+.nav_bar .icon {
+    display: none;
+}
+@media screen and (max-width: 430px) {
+    .nav_bar a:not(:last-child) {display: none;}
+    .nav_bar a.icon {
+        margin-left: auto;
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .nav_bar.responsive {position: relative;}
+    .nav_bar.responsive a.icon {
+        position: absolute;
+        right: -33px;
+        top: 0;
+    }
+
+    .nav_bar.responsive a{
+        color: black;
+        padding:  0% 8%;
+        text-decoration: none;
+        display:block;
+    }
+}
+
 
 
 .introduction{
@@ -58,7 +88,8 @@
     margin-bottom:auto;
     text-align: center;
   }
-  
+
+
 span
 {
     color: rgb(255, 0, 89);
@@ -78,6 +109,8 @@ span
     font-family: 'Roboto';
     font-size: 1.5rem;
 }
+
+
 
 .headshot
 {
@@ -115,6 +148,7 @@ span
 
 .about {
     margin-top: 5%;
+    width: 100%;
     padding: 1%;
     background-color: rgba(249, 249, 255, 0.471);
 }
@@ -158,6 +192,8 @@ span
     border-radius: 10%;
 }
 
+
+
 .skills-title
 {
     padding-top: 6%;
@@ -167,18 +203,25 @@ span
     text-align: center;
 }
 
-.programs
+.skills
 {
+    list-style: none;
     margin-top:-10%;
     margin-bottom: 10%;
-    padding:-100%;
-    display:grid;
-    grid-template-rows: 15rem 15rem;
-    grid-template-columns: 18rem 18rem 18rem 18rem;
-    margin:none;
+    margin-right: 15%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-auto-rows: 0.2fr;
+    grid-row-gap: 0;
+    /*display:grid;*/
+    /*grid-template-rows: 15rem 15rem;*/
+    /*grid-template-columns: 18rem 18rem 18rem 18rem;*/
 }
-
-.programs img
+.mobile-view-skills{
+    display:none;
+}
+.skills img
 {
     object-fit: cover;
    transform:scale(0.3);
@@ -186,7 +229,7 @@ span
    transition: all 1s;
 }
 
-.programs img:hover
+.skills img:hover
 {
     
     transform:scale(0.5);
@@ -194,6 +237,7 @@ span
 
 .experience
 {
+    width: 100%;
     margin-top: 5%;
     background-color: rgba(249, 249, 255, 0.471);
 
@@ -257,6 +301,7 @@ span
 
   .projects
   {
+      width: 100%;
     margin-top:5%;
     background-color: rgba(249, 249, 255, 0.471);
   }
@@ -365,6 +410,7 @@ span
 }
 .copyright-info-bottom
 {
+    width: 100%;
     margin-top:15%;
 }
 .copyright
@@ -373,4 +419,270 @@ span
     font-family: 'IBM Plex Sans';
     margin-top:-1%;
     font-size: 1rem;
+}
+
+@media screen and (max-width: 430px){
+    .introduction{
+        font-family: 'Roboto';
+        font-weight:bold;
+        justify-content: center;
+        font-size:4rem;
+        margin-bottom:auto;
+        text-align: center;
+    }
+
+    .under_headline{
+        text-align: justify-all;
+        font-size: 1.5rem;
+    }
+
+    .headshot{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        height: 30%;
+        width: 30%;
+        border-radius: 50%;
+    }
+    .quicklinks
+    {
+        justify-content: center;
+        margin-right:10%;
+        display:flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .quicklinks ul li
+    {
+        display:inline-block;
+        margin: 1rem 2rem
+    }
+
+    .quicklinks ul li a{
+        font-size: 1.5rem;
+    }
+    .about {
+        margin-top: 5%;
+        width: 100%;
+        padding: 1%;
+        background-color: rgba(249, 249, 255, 0.471);
+    }
+
+    .about-title {
+        justify-content: center;
+        text-align: center;
+        font-family: 'Roboto';
+        font-size:3rem;
+    }
+    .something-div
+    {
+        display:block;
+
+    }
+    .about-section
+    {
+        width:100%;
+        text-align: justify;
+
+    }
+
+    .about-section h1
+    {
+        font-family: 'Roboto';
+        font-size: 1.5rem;
+    }
+
+    .image-in-class-div
+    {
+        width:100%;
+        display: inline-block;
+    }
+
+    .image-in-class-div img
+    {
+        display:none;
+
+    }
+
+    .skills-title
+    {
+        padding-top: 6%;
+        font-family: 'Roboto';
+        font-size:3rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .skills
+    {
+        display:none;
+    }
+    .mobile-view-skills{
+        display:block;
+        color:black;
+        font-family: 'Roboto';
+        font-size: 1.5rem;
+        transition: all 0.5s;
+    }
+    .mobile-view-skills ul li:hover{
+        color: rgb(255, 0, 89);
+    }
+
+    .experience-title
+    {
+        padding-top:5%;
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: 3em;
+    }
+
+    .cmc-title {
+        font-size: 1.5rem;
+        font-family: 'Roboto';
+        display: inline-block;
+        position: relative;
+        padding-top: -3%;
+        padding-left: 2%;
+        color: rgb(255,0,89);
+    }
+
+    .cmc-title:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 7px;
+        bottom: 0;
+        left: 2%;
+        background-color:rgb(255, 0, 89);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .cmc-title:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .job-desc
+    {
+        margin-top:-2%;
+        padding-left:2%;
+        font-family: 'Roboto';
+        font-size: 2rem;
+    }
+
+    .work-desc
+    {
+        font-weight: bolder;
+        font-family: 'Roboto';
+        font-size: 1.5rem;
+    }
+
+    .work-desc li
+    {
+        margin-top:2%;
+    }
+    .projects
+    {
+        width: 100%;
+        margin-top:5%;
+        background-color: rgba(249, 249, 255, 0.471);
+    }
+    .projects-title
+    {
+        padding-top:5%;
+        font-family: 'Roboto';
+        font-size: 3.5rem;
+        text-align: center;
+
+    }
+
+    .slideshow-container {
+        width: 85%;
+        position: relative;
+        margin: auto;
+    }
+
+    .slideshow-container img
+    {
+        object-fit: cover;
+        border-radius: 13%/25%;
+
+    }
+
+    .mySlides {
+        display: none;
+    }
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    .title {
+        display:none;
+    }
+    .title a
+    {
+        color: black;
+    }
+
+    .title a:hover
+    {
+        color:rgb(255, 0, 89);
+    }
+
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
 }

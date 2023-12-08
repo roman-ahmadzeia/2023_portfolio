@@ -1,11 +1,9 @@
-
-// window.addEventListener('scroll', function () {
-//     var quicklinks = document.querySelector('.quicklinks');
-//     var quicklinksOffset = quicklinks.offsetTop;
-//     if (window.scrollY > quicklinksOffset) {
-//         quicklinks.classList.remove('hide-quicklinks');
-//     } else {
-//         quicklinks.classList.add('hide-quicklinks');
-//     }
-// });
+function myFunction() {
+    var x = document.getElementById("nav_bar");
+    if (x.className === "nav_bar") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav_bar";
+    }
+}
 

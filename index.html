@@ -4,19 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href ="style.css" rel = "stylesheet" type = "text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
     <title>Roman Ahmad Zeia</title>
 </head>
 
+
 <body>
-    <nav class = "nav_bar">
-        <ul>
-            <li><a href ="#intro">intro</a></li>
-            <li><a href ="#about">about</a></li>
-            <li><a href ="#experience">experience</a></li>
-            <li><a href ="#projects">projects</a></li>
-            <li><a href ="/Romans 2023 Resume.pdf" download = "Roman Ahmad Zeia's Resume">resume</a></li>
-        </ul>
-    </nav>
+
+<script>
+    function dropdown() {
+    var x = document.getElementById("nav_bar");
+    if (x.className === "nav_bar") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav_bar";
+    }
+}
+
+</script>
+    <div class = "nav_bar" id =nav_bar>
+            <a href ="#intro">home</a>
+            <a href ="#about">about</a>
+            <a href ="#experience">experience</a>
+            <a href ="#projects">projects</a>
+            <a href ="/Romans 2023 Resume.pdf" download = "Roman Ahmad Zeia's Resume">resume</a>
+            <a href = "javascript:void(0);" class="icon" onclick ="dropdown()"><i class = "fa fa-bars"></i></a>
+    </div>
 
     <div class = "intro" id ="intro">
         <h1 class = "introduction"> Hey there, im <span>Roman</span></h1>
@@ -52,19 +66,41 @@
                 <img src = '/images/in_school.png'>
             </div>
         </div>
+    </div>
+<h1 class ="skills-title">Some Of My Skills.</h1>
 
-        <h1 class ="skills-title">Some Of My Skills.</h1>
-        <div class = "programs">
-            <img src = "images/python.png" id = "python_logo">
-            <img src = "images/cpp.png" id = "cpp_logo">
-            <img src = "images/react.png" id = "react_logo">
-            <img src = "images/java.png" id = "java_logo">
-            <img src = "images/js.png" id = "javascript_logo">
-            <img src = "images/htmlcss.png" id = "html5css_logo">
-            <img src = "images/flutter.png" id = flutter_logo>
-            <img src = "images/sql.png" id = "sql_logo">
+    <div class ="programs">
+        <div class ="mobile-view-skills">
+            <ul>
+                <li><h3>Java</h3></li>
+                <li><h3>Python</h3></li>
+                <li><h3>C++</h3></li>
+                <li><h3>HTML / CSS</h3></li>
+                <li><h3>Javascript</h3></li>
+                <li><h3>Dart</h3></li>
+                <li><h3>SQL</h3></li>
+            </ul>
+            <ul>
+                <li><h3>Frameworks: React.js, Flutter</h3></li>
+                <li><h3>Tools: NumPy, SciPy, Matplotlib</h3></li>
+                <li><h3>Databases: PostgreSQL, mySQL, JDBC, Firebase</h3></li>
+            </ul>
+
+        </div>
+
+            </ul>
+        <div class ="skills">
+        <img src = "images/python.png" id = "python_logo">
+        <img src = "images/cpp.png" id = "cpp_logo">
+        <img src = "images/react.png" id = "react_logo">
+        <img src = "images/java.png" id = "java_logo">
+        <img src = "images/js.png" id = "javascript_logo">
+        <img src = "images/htmlcss.png" id = "html5css_logo">
+        <img src = "images/flutter.png" id = flutter_logo>
+        <img src = "images/sql.png" id = "sql_logo">
         </div>
     </div>
+
 
     <div class = "experience" id =experience>
         <h1 class ="experience-title">My Experiences.</h1>
